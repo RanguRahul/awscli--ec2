@@ -52,7 +52,8 @@ To check whether route table and subnets are created and assigned successfully u
     
     aws ec2 describe-subnets --filters "Name=vpc-id,Values=<vpcId>" --query "Subnets[*].{ID:SubnetId,CIDR:CidrBlock}"
 
-    Associating Route Table and modifying subnet 
+Associating Route Table and modifying subnet
+------------------------------------------
     
 The next step is to associate the route table with the subnet and making the same subnet as public by mapping the public IP address to it. Enter the SubnetId and RouteTableId that you noted earlier.  To associate route table type.
 
