@@ -50,6 +50,7 @@ To check whether route table and subnets are created and assigned successfully u
 
     aws ec2 describe-route-tables --route-table-id <RouteTableId>
     
+    
     aws ec2 describe-subnets --filters "Name=vpc-id,Values=<vpcId>" --query "Subnets[*].{ID:SubnetId,CIDR:CidrBlock}"
 
 Associating Route Table and modifying subnet
@@ -75,6 +76,7 @@ Create the key-pair using the below command:
 For security group use the below commands:
 
     aws ec2 create-security-group --group-name <security-group-name> --description "<description>" --vpc-id <vpcId>
+    
 
     aws ec2 authorize-security-group-ingress --group-id <GroupId> --protocol tcp --port 22 --cidr 0.0.0.0/0
     
